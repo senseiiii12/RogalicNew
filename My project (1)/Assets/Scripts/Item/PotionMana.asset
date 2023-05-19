@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PotionMana
   m_EditorClassIdentifier: 
   id: 2
-  itemName: ManaBottle
+  itemName: Mana
+  price: 44
   value: 25
   icon: {fileID: 1566947837, guid: 36871e2be3be15c46abe814ea7c3015c, type: 3}
   type: 1

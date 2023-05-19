@@ -13,7 +13,6 @@ public class ItemController : MonoBehaviour
     public void RemoveItem()
     {
         InventoryController.Instance.Remove(item);
-        DropItem();
         Destroy(gameObject);
     }
     public void AddItem(Item newItem)
@@ -33,19 +32,23 @@ public class ItemController : MonoBehaviour
                 RemoveItem();
                 break;
             case Item.ItemType.Weapon:
+                PlayerStats.plStats.maxDamage += item.value;
+                RemoveItem();
+                break;
+            case Item.ItemType.OverSpeed:
                 PlayerStats.plStats.speed += item.value;
                 RemoveItem();
                 break;
         }
     }
 
-    public void ByItem()
+    public void ByItemShop()
     {
-        if (PlayerStats.plStats.bitCoins >= Int32.Parse(Item.itm.price))
+        if (PlayerStats.plStats.bitCoins >= item.price)
         {
-            PlayerStats.plStats.bitCoins -= Int32.Parse(Item.itm.price);
+            PlayerStats.plStats.bitCoins -= item.price;
             InventoryController.Instance.Add(item);
-        }
+        }   
     }
 
 
@@ -53,6 +56,8 @@ public class ItemController : MonoBehaviour
     {
             Vector3 point = (UnityEngine.Random.insideUnitSphere * 5) + PlayerStats.plStats.player.transform.position;
             Instantiate(item.prefab, point, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
+            InventoryController.Instance.Remove(item);
+            Destroy(gameObject);
     }
 
 

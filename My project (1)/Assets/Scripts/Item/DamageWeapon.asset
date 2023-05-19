@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58d4bd68a3113da459cec2b17b7d9d26, type: 3}
-  m_Name: New Item
+  m_Name: DamageWeapon
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  value: 0
-  icon: {fileID: 0}
-  type: 0
-  prefab: {fileID: 0}
+  id: 3
+  itemName: Sword
+  price: 100
+  value: 30
+  icon: {fileID: 21300000, guid: b2f3327f47464544293b6b9018e1296e, type: 3}
+  type: 2
+  prefab: {fileID: 5390098600839908719, guid: e1b7e8e5c31162b488317ce09a216c67, type: 3}

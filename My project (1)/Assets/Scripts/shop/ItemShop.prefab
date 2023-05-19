@@ -366,7 +366,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8497325965156489884}
         m_TargetAssemblyTypeName: ItemController, Assembly-CSharp
-        m_MethodName: ByItem
+        m_MethodName: ByItemShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12155762f1c0da48a35925105781788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 7a4e0e1b096166541adc99f58be9625b, type: 2}
 --- !u!1 &8047996448259574327
 GameObject:
   m_ObjectHideFlags: 0

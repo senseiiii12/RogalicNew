@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   itemName: Host
+  price: 50
   value: 10
   icon: {fileID: 1205874455, guid: 36871e2be3be15c46abe814ea7c3015c, type: 3}
-  type: 2
+  type: 3
   prefab: {fileID: 3930224419376919329, guid: 825e63e00d85eba4dafea9a8b3efd8a4, type: 3}

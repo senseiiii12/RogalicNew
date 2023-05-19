@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PotionHeal
   m_EditorClassIdentifier: 
   id: 1
-  itemName: HealBottle
+  itemName: Heal
+  price: 22
   value: 20
   icon: {fileID: -1894406376, guid: 36871e2be3be15c46abe814ea7c3015c, type: 3}
   type: 0

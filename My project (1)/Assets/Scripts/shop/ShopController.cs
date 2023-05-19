@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ShopController : MonoBehaviour
 {
-    //public static InventoryController Instance;
+    public static ShopController ShopInstance;
     public List<Item> items = new List<Item>();
     public Transform ItemContent;
     public GameObject shopItem;
-    public ItemController[] inventoryItems;
-    public GameObject shopPanel;
+    //public ItemController[] inventoryItems;
+    
 
     public void ListItems()
     {
@@ -22,7 +22,7 @@ public class ShopController : MonoBehaviour
             var itemprice = obj.transform.Find("PriceItem").GetComponent<Text>();
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
-            itemprice.text = item.price;
+            itemprice.text = item.price.ToString();
             obj.GetComponent<ItemController>().item = item;
         }    
     }
@@ -36,24 +36,12 @@ public class ShopController : MonoBehaviour
         }
     }
 
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Start()
     {
-        if (collision.name == "Player")
-        {
-            shopPanel.SetActive(true);
-            ListItems();
-        }
+        ShopInstance = this;
+    }
 
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.name == "Player")
-        {
-            shopPanel.SetActive(false);
-            clear();
-            
-        }
-    }
+
+
+
 }

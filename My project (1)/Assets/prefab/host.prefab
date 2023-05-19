@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 8d3db33f1d61e884586759fb0141275f, type: 2}
-  remove: {fileID: 0}
 --- !u!114 &6586772970791685266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,9 +138,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3930224419376919329}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 27a7696555f29b94c9237da462cd26d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 196533b04af98d14f9ef6d4e5e58d088, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

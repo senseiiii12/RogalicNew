@@ -9,7 +9,7 @@ public class Item : ScriptableObject
     public static Item itm;
     public int id;
     public string itemName;
-    public string price;
+    public int price;
     public int value;
     public Sprite icon;
     public ItemType type;
@@ -18,7 +18,8 @@ public class Item : ScriptableObject
     {
         PotionHeal,
         PotionMana,
-        Weapon
+        Weapon,
+        OverSpeed
     }
 
     public void Awake()
