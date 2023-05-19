@@ -44,6 +44,7 @@ public class InventoryController : MonoBehaviour
             itemIcon.sprite = item.icon;
         }
         SetInventoryItems();
+        
     }
 
     public void SetInventoryItems()
@@ -57,12 +58,6 @@ public class InventoryController : MonoBehaviour
 
     
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))

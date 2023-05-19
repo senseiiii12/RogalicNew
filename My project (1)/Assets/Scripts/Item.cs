@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Item/Create new Item")]
 public class Item : ScriptableObject
 {
+    public static Item itm;
     public int id;
     public string itemName;
+    public string price;
     public int value;
     public Sprite icon;
     public ItemType type;
@@ -17,14 +20,10 @@ public class Item : ScriptableObject
         PotionMana,
         Weapon
     }
-    void Start()
+
+    public void Awake()
     {
-        
+        itm = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,6 @@ using UnityEngine.UI;
 public class ItemController : MonoBehaviour
 {
     public Item item;
-    public Button remove;
     public static ItemController itemController;
     
 
@@ -36,6 +36,15 @@ public class ItemController : MonoBehaviour
                 PlayerStats.plStats.speed += item.value;
                 RemoveItem();
                 break;
+        }
+    }
+
+    public void ByItem()
+    {
+        if (PlayerStats.plStats.bitCoins >= Int32.Parse(Item.itm.price))
+        {
+            PlayerStats.plStats.bitCoins -= Int32.Parse(Item.itm.price);
+            InventoryController.Instance.Add(item);
         }
     }
 

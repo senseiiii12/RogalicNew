@@ -14,7 +14,6 @@ public class ShopController : MonoBehaviour
 
     public void ListItems()
     {
-
         foreach (Item item in items)
         {
             GameObject obj = Instantiate(shopItem, ItemContent);
@@ -23,19 +22,12 @@ public class ShopController : MonoBehaviour
             var itemprice = obj.transform.Find("PriceItem").GetComponent<Text>();
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
-            itemprice.text = item.value.ToString();
-        }
-        SetShopItems();
+            itemprice.text = item.price;
+            obj.GetComponent<ItemController>().item = item;
+        }    
     }
 
-    public void SetShopItems()
-    {
-        inventoryItems = ItemContent.GetComponentsInChildren<ItemController>();
-        for (int i = 0; i < items.Count; i++)
-        {
-            inventoryItems[i].AddItem(items[i]);
-        }
-    }
+   
     public void clear()
     {
         foreach (Transform item in ItemContent)
@@ -60,6 +52,7 @@ public class ShopController : MonoBehaviour
         if (collision.name == "Player")
         {
             shopPanel.SetActive(false);
+            clear();
             
         }
     }
