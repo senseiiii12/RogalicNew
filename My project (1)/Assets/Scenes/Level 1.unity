@@ -7959,7 +7959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -138.34198, y: -171.16696}
+  m_AnchoredPosition: {x: -120.34204, y: -171.16696}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1804699486
@@ -8894,7 +8894,7 @@ MonoBehaviour:
   sliderXP: {fileID: 1454025602}
   bitCoins: 0
   souls: 0
-  keys: 0
+  keys: 22
   enemy: {fileID: 3277444250449833884, guid: 1ec8ca0c671285547a63e9897f60dd56, type: 3}
   chest: {fileID: 7046930563200747483, guid: fae07c83319158c4896a7271913d52e9, type: 3}
 --- !u!4 &2010188325

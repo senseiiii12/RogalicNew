@@ -40,20 +40,24 @@ public class ChestScript : MonoBehaviour
     public void CreateAgent()
     {
         
-        int random;
-        for(int i = 0; i < 5; i++)
+        int r1= Random.Range(100, 999);
+        int r2 = Random.Range(100, 999);
+        int r3 = (r1 * r2) % 100;
+        Debug.Log(r3);
+
+        for (int i = 0; i < 5; i++)
         {
-            random = Random.Range(1, 101);
+            
             Vector3 point = (Random.insideUnitSphere * spawnradius) + transform.position;
+            
 
-
-            if (random > 5)
+            if (r3 <= 5 && i == 4)
             {
-                Instantiate(agent_coin, point, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
+                Instantiate(agent_key, point, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
             }
             else
             {
-                Instantiate(agent_key, point, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
+                Instantiate(agent_coin, point, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
             }          
             
         }
