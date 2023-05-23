@@ -9,6 +9,7 @@ public class D_SpellController : MonoBehaviour
     public List<D_Spell_Ability_enum> skillItems = new List<D_Spell_Ability_enum>();
     public Transform SkillContent;
     public GameObject SkillItem;
+    public GameObject obj;
 
 
     private void Start()
@@ -21,7 +22,7 @@ public class D_SpellController : MonoBehaviour
     {
         foreach (D_Spell_Ability_enum itemSkill in skillItems)
         {
-            GameObject obj = Instantiate(SkillItem, SkillContent);
+            obj = Instantiate(SkillItem, SkillContent);
 
             Image skillIcon = obj.transform.Find("ImageSkill").GetComponent<Image>();
             skillIcon.sprite = itemSkill.iconSkill;

@@ -6,18 +6,21 @@ using UnityEngine.UI;
 public class D_SpellUse : MonoBehaviour
 {
     GameObject player;
-    Image img;
+    int kd;
+    Image skillIcon;
+
 
     private void Start()
-    {
-        
+    {   
         player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
+        CoolDown(kd,skillIcon);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             UseSkill(0);
+            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -28,7 +31,7 @@ public class D_SpellUse : MonoBehaviour
 
     public void UseSkill(int i)
     {
-        if(PlayerStats.plStats.mana > 0)
+        if(PlayerStats.plStats.mana > 0 && D_SpellController.d_instance.skillItems[i].IsCoolDown == false)
         {
             PlayerStats.plStats.mana -= D_SpellController.d_instance.skillItems[i].ManaCoastSkill;
             GameObject spell = Instantiate(D_SpellController.d_instance.skillItems[i].prefabSkill, player.transform.position, Quaternion.identity);
@@ -37,23 +40,27 @@ public class D_SpellUse : MonoBehaviour
             Vector2 direction = mPosition - myPosition;
             spell.GetComponent<Rigidbody2D>().velocity = direction * D_SpellController.d_instance.skillItems[i].forceSkill;
             Destroy(spell, 2);
+
             D_SpellController.d_instance.skillItems[i].IsCoolDown = true;
-            CoolDown(i);
+
+            skillIcon = D_SpellController.d_instance.obj.transform.Find("ImageSkill").GetComponent<Image>();
+            skillIcon.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
+            skillIcon.fillAmount = 0;
+
+            kd = i;
+            
         }   
     }
 
-    public void CoolDown(int i)
+    public void CoolDown(int i, Image skillIcon)
     {
-        //Image skillIcon = obj.transform.Find("ImageSkill").GetComponent<Image>();
-        Image skillIcon = transform.Find("ImageSkill").GetComponent<Image>();
-        skillIcon.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
         if (D_SpellController.d_instance.skillItems[i].IsCoolDown == true)
         {
-            img.fillAmount += 1 / D_SpellController.d_instance.skillItems[i].kd * Time.deltaTime;
-            if (img.fillAmount == 1)
-            {
-                D_SpellController.d_instance.skillItems[i].IsCoolDown = false;
-            }
+            skillIcon.fillAmount += 1 / D_SpellController.d_instance.skillItems[i].kd * Time.deltaTime;     
+        }
+        else if (skillIcon.fillAmount == 1)
+        {
+            D_SpellController.d_instance.skillItems[i].IsCoolDown = false;
         }
     }
 }
