@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CoinAnimation : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed;
     public double animationDuration = 2f; 
     private Vector3 direction;
-    private float timer = 0f;
+    private float timer;
     private bool isAnimating = true;
 
     private void Start()

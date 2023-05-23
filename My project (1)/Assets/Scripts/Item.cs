@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Item/Create new Item")]
 public class Item : ScriptableObject
 {
-    public static Item itm;
     public int id;
     public string itemName;
     public int price;
@@ -22,9 +21,6 @@ public class Item : ScriptableObject
         OverSpeed
     }
 
-    public void Awake()
-    {
-        itm = this;
-    }
+   
 
 }

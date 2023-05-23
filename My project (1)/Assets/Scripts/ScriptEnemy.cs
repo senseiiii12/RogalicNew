@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class ScriptEnemy : MonoBehaviour
 {
+    public static ScriptEnemy enemyInstance;
     public int health = 100;
     public GameObject pref;
     GameObject player;
@@ -34,6 +35,7 @@ public class ScriptEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyInstance = this;
         player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("enemyShooting", cooldown, cooldown);
         stats = GameObject.FindAnyObjectByType<PlayerStats>();
