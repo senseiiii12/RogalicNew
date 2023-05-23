@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class D_SpellUse : MonoBehaviour
 {
-    D_Spell_Ability_enum skill;
     GameObject player;
-    private bool IsCoolDownSkill;
     Image img;
 
     private void Start()
     {
-        img = GetComponent<Image>();
+        
         player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
@@ -46,8 +44,9 @@ public class D_SpellUse : MonoBehaviour
 
     public void CoolDown(int i)
     {
-        
-        img.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
+        //Image skillIcon = obj.transform.Find("ImageSkill").GetComponent<Image>();
+        Image skillIcon = transform.Find("ImageSkill").GetComponent<Image>();
+        skillIcon.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
         if (D_SpellController.d_instance.skillItems[i].IsCoolDown == true)
         {
             img.fillAmount += 1 / D_SpellController.d_instance.skillItems[i].kd * Time.deltaTime;
