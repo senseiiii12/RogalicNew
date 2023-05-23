@@ -6042,6 +6042,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bbe992904d72ee488e726e32323e3e2, type: 2}
   SkillContent: {fileID: 120647345}
   SkillItem: {fileID: 8943132453168674514, guid: c1ba0fb5c1c11f845bda9ac76424707a, type: 3}
+  obj: {fileID: 0}
 --- !u!4 &1275218300
 Transform:
   m_ObjectHideFlags: 0
@@ -6069,6 +6070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3577556d1149a43bfad5c9662eb5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillImage: {fileID: 8943132453168674514, guid: c1ba0fb5c1c11f845bda9ac76424707a, type: 3}
 --- !u!1 &1290886109
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ MonoBehaviour:
   damageSkill: 10
   forceSkill: 3
   kd: 10
+  IsCoolDown: 1
   iconSkill: {fileID: 21300000, guid: eecb85004343b0e4d8b78fd7f9877b32, type: 3}
   typeSkill: 0
   prefabSkill: {fileID: 2567180294300579655, guid: 72cafa88efb407849997ab4bedfa805b, type: 3}

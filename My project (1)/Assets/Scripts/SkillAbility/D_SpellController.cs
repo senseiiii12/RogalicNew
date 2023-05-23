@@ -23,7 +23,6 @@ public class D_SpellController : MonoBehaviour
         foreach (D_Spell_Ability_enum itemSkill in skillItems)
         {
             obj = Instantiate(SkillItem, SkillContent);
-
             Image skillIcon = obj.transform.Find("ImageSkill").GetComponent<Image>();
             skillIcon.sprite = itemSkill.iconSkill;
         }

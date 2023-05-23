@@ -8,6 +8,7 @@ public class D_SpellUse : MonoBehaviour
     GameObject player;
     int kd;
     Image skillIcon;
+    
 
 
     private void Start()
@@ -16,16 +17,21 @@ public class D_SpellUse : MonoBehaviour
     }
     void Update()
     {
-        CoolDown(kd,skillIcon);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             UseSkill(0);
-            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             UseSkill(1);
         }
+    }
+
+    private void FixedUpdate()
+    {
+
+        CoolDown(kd);
+
     }
 
 
@@ -51,16 +57,16 @@ public class D_SpellUse : MonoBehaviour
             
         }   
     }
-
-    public void CoolDown(int i, Image skillIcon)
+    
+    public void CoolDown(int i)
     {
         if (D_SpellController.d_instance.skillItems[i].IsCoolDown == true)
         {
-            skillIcon.fillAmount += 1 / D_SpellController.d_instance.skillItems[i].kd * Time.deltaTime;     
-        }
-        else if (skillIcon.fillAmount == 1)
-        {
-            D_SpellController.d_instance.skillItems[i].IsCoolDown = false;
+            skillIcon.fillAmount += 1 / D_SpellController.d_instance.skillItems[i].kd * Time.deltaTime;
+            if (skillIcon.fillAmount == 1)
+            {
+                D_SpellController.d_instance.skillItems[i].IsCoolDown = false;
+            }
         }
     }
 }
