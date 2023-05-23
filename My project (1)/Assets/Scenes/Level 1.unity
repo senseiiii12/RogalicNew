@@ -6039,6 +6039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillItems:
   - {fileID: 11400000, guid: 63e5bcfc3d66a3e4b892b9d6fb98cc6d, type: 2}
+  - {fileID: 11400000, guid: 6bbe992904d72ee488e726e32323e3e2, type: 2}
   SkillContent: {fileID: 120647345}
   SkillItem: {fileID: 1533614979404500763, guid: 860e26c76203f404ebc9cb69cebf7a05, type: 3}
 --- !u!4 &1275218300

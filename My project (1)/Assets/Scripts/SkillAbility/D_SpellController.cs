@@ -23,7 +23,7 @@ public class D_SpellController : MonoBehaviour
         {
             GameObject obj = Instantiate(SkillItem, SkillContent);
 
-            var skillIcon = obj.transform.Find("IconSkill").GetComponent<Image>();
+            Image skillIcon = obj.transform.Find("ImageSkill").GetComponent<Image>();
             skillIcon.sprite = itemSkill.iconSkill;
         }
     }

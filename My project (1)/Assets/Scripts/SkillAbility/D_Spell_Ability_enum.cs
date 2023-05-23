@@ -10,6 +10,8 @@ public class D_Spell_Ability_enum : ScriptableObject
     public int ManaCoastSkill;
     public int damageSkill;
     public float forceSkill;
+    public float kd;
+    public bool IsCoolDown;
     public Sprite iconSkill;
     public SkillsType typeSkill;
     public GameObject prefabSkill;
@@ -18,7 +20,6 @@ public class D_Spell_Ability_enum : ScriptableObject
     {
         DamageSkill,
         HealSkill
-
     }
 
     

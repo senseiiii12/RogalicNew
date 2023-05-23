@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bb0366a197b06f428e75828b23687d5, type: 3}
-  m_Name: Skill_1
+  m_Name: Skill_2
   m_EditorClassIdentifier: 
-  id: 1
-  ManaCoastSkill: 25
-  damageSkill: 50
-  forceSkill: 8
-  kd: 2
-  iconSkill: {fileID: 21300000, guid: 300abdf8cbdd5c742a05b6506767fd64, type: 3}
+  id: 2
+  ManaCoastSkill: 70
+  damageSkill: 10
+  forceSkill: 3
+  kd: 10
+  iconSkill: {fileID: 21300000, guid: eecb85004343b0e4d8b78fd7f9877b32, type: 3}
   typeSkill: 0
-  prefabSkill: {fileID: 2567180294300579655, guid: d1789b1690983d94c857ce65ae95e7de, type: 3}
+  prefabSkill: {fileID: 2567180294300579655, guid: 72cafa88efb407849997ab4bedfa805b, type: 3}
