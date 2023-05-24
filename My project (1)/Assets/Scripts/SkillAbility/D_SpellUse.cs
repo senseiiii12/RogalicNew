@@ -9,7 +9,7 @@ public class D_SpellUse : MonoBehaviour
     int kd;
     Image skillIcon;
     
-
+    
 
     private void Start()
     {   
@@ -25,19 +25,23 @@ public class D_SpellUse : MonoBehaviour
         {
             UseSkill(1);
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            UseSkill(2);
+        }
     }
 
     private void FixedUpdate()
     {
 
-        CoolDown(kd);
+        //CoolDown(kd);
 
     }
 
 
     public void UseSkill(int i)
     {
-        if(PlayerStats.plStats.mana > 0 && D_SpellController.d_instance.skillItems[i].IsCoolDown == false)
+        if(PlayerStats.plStats.mana > 0 /*&& D_SpellController.d_instance.skillItems[i].IsCoolDown == false*/)
         {
             PlayerStats.plStats.mana -= D_SpellController.d_instance.skillItems[i].ManaCoastSkill;
             GameObject spell = Instantiate(D_SpellController.d_instance.skillItems[i].prefabSkill, player.transform.position, Quaternion.identity);
@@ -47,11 +51,11 @@ public class D_SpellUse : MonoBehaviour
             spell.GetComponent<Rigidbody2D>().velocity = direction * D_SpellController.d_instance.skillItems[i].forceSkill;
             Destroy(spell, 2);
 
-            D_SpellController.d_instance.skillItems[i].IsCoolDown = true;
+            //D_SpellController.d_instance.skillItems[i].IsCoolDown = true;
 
-            skillIcon = D_SpellController.d_instance.obj.transform.Find("ImageSkill").GetComponent<Image>();
-            skillIcon.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
-            skillIcon.fillAmount = 0;
+            //skillIcon = D_SpellController.d_instance.obj.transform.Find("ImageSkill").GetComponent<Image>();
+            //skillIcon.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
+            //skillIcon.fillAmount = 0;
 
             kd = i;
             
