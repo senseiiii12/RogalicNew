@@ -5,11 +5,9 @@ using UnityEngine;
 public class RoomSpawn : MonoBehaviour
 {
     public int Direction;
-
     private Rooms templates;
     private int rand;
     public bool spawned = false;
-
     float waitTime = 5f;
 
     // Start is called before the first frame update
@@ -60,9 +58,11 @@ public class RoomSpawn : MonoBehaviour
             if (!spawned)
             {
                 //Instantiate(templates.closedRoom,transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                Destroy(gameObject); 
             }
             spawned = true;
         }
     }
+
+    
 }
