@@ -2169,7 +2169,7 @@ Camera:
   far clip plane: 1000
   field of view: 113
   orthographic: 1
-  orthographic size: 16.64
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2737,6 +2737,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631680509}
   m_CullTransparentMesh: 1
+--- !u!1 &651199359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2783141004736995001, guid: eb30d8ec4b847c94a9d843a3a42b077b, type: 3}
+  m_PrefabInstance: {fileID: 28017329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &651199362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651199359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92466b7828cbd941a0398ca252a4177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &653235554
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,6 +8611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010188325}
   - component: {fileID: 2010188324}
+  - component: {fileID: 2010188326}
   m_Layer: 0
   m_Name: PlayerStats
   m_TagString: Untagged
@@ -8649,6 +8667,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2010188326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010188323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24f902a482360b44bdf1337f2ebf1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottomRooms:
+  - {fileID: 2783141004736995001, guid: afeb596e909322d4482137e0bd823524, type: 3}
+  - {fileID: 2783141004736995001, guid: ae9371a0b1f41244da70868eecb61910, type: 3}
+  - {fileID: 2783141004736995001, guid: 52785fc5ed727254e8493ed359268a44, type: 3}
+  - {fileID: 2783141004736995001, guid: 1479c4bbc8443c64fbe823b2b2853391, type: 3}
+  topRooms:
+  - {fileID: 2783141004736995001, guid: 61151740fb571d741bc4bd914117133c, type: 3}
+  - {fileID: 2783141004736995001, guid: 1479c4bbc8443c64fbe823b2b2853391, type: 3}
+  - {fileID: 2783141004736995001, guid: f792477adf8f76546bd2a921d20c42a2, type: 3}
+  - {fileID: 2783141004736995001, guid: 67df8edf6db324047b20515afd6e2a80, type: 3}
+  leftRooms:
+  - {fileID: 2783141004736995001, guid: 52785fc5ed727254e8493ed359268a44, type: 3}
+  - {fileID: 2783141004736995001, guid: 70a4b96241c234e4cba7eb101275a743, type: 3}
+  - {fileID: 2783141004736995001, guid: 5157d0f022ca4604b8908a29ff4245d2, type: 3}
+  - {fileID: 2783141004736995001, guid: f792477adf8f76546bd2a921d20c42a2, type: 3}
+  rightRooms:
+  - {fileID: 2783141004736995001, guid: afeb596e909322d4482137e0bd823524, type: 3}
+  - {fileID: 2783141004736995001, guid: 70a4b96241c234e4cba7eb101275a743, type: 3}
+  - {fileID: 2783141004736995001, guid: 8c7fa410e41514c41ba6ea7d4feadf50, type: 3}
+  - {fileID: 2783141004736995001, guid: 61151740fb571d741bc4bd914117133c, type: 3}
+  closedRoom: {fileID: 2783141004736995001, guid: 5327b3340b89d89449d967e095052d83, type: 3}
+  rooms: []
 --- !u!1 &2012870587
 GameObject:
   m_ObjectHideFlags: 0

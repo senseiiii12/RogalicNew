@@ -214,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2783141004736995003}
   - component: {fileID: 2783141004736995000}
+  - component: {fileID: -5604034839254623129}
   m_Layer: 0
   m_Name: LeftRoom
   m_TagString: Untagged
@@ -301,6 +302,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5604034839254623129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783141004736995001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92466b7828cbd941a0398ca252a4177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2783141005289556629
 GameObject:
   m_ObjectHideFlags: 0
