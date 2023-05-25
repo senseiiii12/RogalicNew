@@ -6,6 +6,10 @@ public class DestroyRoom : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        if(collision.tag == "SpawnPoint")
+        {
+            Destroy(collision.gameObject);
+        }
+        
     }
 }

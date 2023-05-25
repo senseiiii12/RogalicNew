@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public Transform Player;
-    public GameObject enemy;
+    
     void Update()
     {
         

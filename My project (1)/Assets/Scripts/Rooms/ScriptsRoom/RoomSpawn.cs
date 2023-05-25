@@ -31,7 +31,7 @@ public class RoomSpawn : MonoBehaviour
         {
             if(Direction == 1)
             {
-                rand = Random.Range(0, templates.topRooms.Length);
+                rand = Random.Range(0, templates.topRooms.Length );
                 Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
             }
             else if (Direction == 2)
@@ -57,9 +57,9 @@ public class RoomSpawn : MonoBehaviour
     {
         if (collision.CompareTag("SpawnPoint"))
         {
-            if (collision.GetComponent<RoomSpawn>().spawned && !spawned)
+            if (!spawned)
             {
-                Instantiate(templates.closedRoom,transform.position, Quaternion.identity);
+                //Instantiate(templates.closedRoom,transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
             spawned = true;
