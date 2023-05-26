@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
         //StartCoroutine(getMMana(20));
         StartCoroutine(RandomChest());
         StartCoroutine(RandomEmemy());
+        StartCoroutine(getMMana(30));
         
     }
 
@@ -24,14 +25,13 @@ public class PlayerStats : MonoBehaviour
         int difference;
         while (true)
         {
-            difference = PlayerController.instance.plF.maxMana - PlayerController.instance.plF.mana;
-            if (manaIteration > difference)
-            {
-                PlayerController.instance.plF.mana += difference;
-                yield return null;
-            }
-            else
-                CreateRandomEnemy();
+            //difference = PlayerController.instance.plF.maxMana - PlayerController.instance.plF.mana;
+            //if (manaIteration > difference)
+            //{
+            //    PlayerController.instance.plF.mana += difference;
+            //    yield return null;
+            //}
+            //else
                 PlayerController.instance.plF.mana += manaIteration;
                 yield return new WaitForSeconds(3);
         }
