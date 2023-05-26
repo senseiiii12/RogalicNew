@@ -26,11 +26,11 @@ public class ChestScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "Player" && PlayerStats.plStats.keys > 0 && isOpen == false)
+        if(collision.name == "Player" && PlayerController.instance.plF.keys > 0 && isOpen == false)
         {
             isOpen = true;
             animator.SetBool("isOpen", true);
-            PlayerStats.plStats.keys -= 1;
+            PlayerController.instance.plF.keys -= 1;
             CreateAgent();
             Destroy(gameObject, 4);
         }

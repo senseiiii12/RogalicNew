@@ -54,7 +54,7 @@ public class LevelSkills : MonoBehaviour
 
     public void UpSkillAS()
     {
-        if (PlayerStats.plStats.skillPoint > 0)
+        if (PlayerController.instance.plF.skillPoint > 0)
         {
             if (countSliderAS >= 10)
             {
@@ -65,14 +65,14 @@ public class LevelSkills : MonoBehaviour
                 PlayerUI.plUI.plus_AS.SetActive(true);
                 countSliderAS++;
                 plus_skillAS++;
-                PlayerStats.plStats.force += 1;
-                PlayerStats.plStats.skillPoint--;
+                PlayerController.instance.plF.attackSpeed += 1;
+                PlayerController.instance.plF.skillPoint--;
             }
         }           
     }
     public void UpSkillMS()
     {      
-        if (PlayerStats.plStats.skillPoint > 0)
+        if (PlayerController.instance.plF.skillPoint > 0)
         {
             if (countSliderMS >= 10)
             {
@@ -83,15 +83,15 @@ public class LevelSkills : MonoBehaviour
                 PlayerUI.plUI.plus_MS.SetActive(true);
                 countSliderMS++;
                 plus_skillMS++;
-                PlayerStats.plStats.speed += 1;
-                PlayerStats.plStats.skillPoint--;
+                PlayerController.instance.plF.moveSpeed += 1;
+                PlayerController.instance.plF.skillPoint--;
             }
         }
     }
 
     public void UpSkillD()
     {    
-        if (PlayerStats.plStats.skillPoint > 0)
+        if (PlayerController.instance.plF.skillPoint > 0)
         {
             if (countSliderD >= 10)
             {
@@ -102,16 +102,15 @@ public class LevelSkills : MonoBehaviour
                 PlayerUI.plUI.plus_D.SetActive(true);
                 countSliderD++;
                 plus_skillD += 10;
-                PlayerStats.plStats.maxDamage += 10;
-                PlayerStats.plStats.minDamage += 10;
-                PlayerStats.plStats.skillPoint--;
+                PlayerController.instance.plF.maxDamage += 10;
+                PlayerController.instance.plF.skillPoint--;
             }
         }
     }
 
     public void UpSkillMH()
     {   
-        if (PlayerStats.plStats.skillPoint > 0)
+        if (PlayerController.instance.plF.skillPoint > 0)
         {
             if (countSliderMH >= 10)
             {
@@ -122,9 +121,9 @@ public class LevelSkills : MonoBehaviour
                 PlayerUI.plUI.plus_MH.SetActive(true);
                 countSliderMH++;
                 plus_skillMH += 25;
-                PlayerStats.plStats.maxHealth += 25;
-                PlayerStats.plStats.hBarPlayerSlider.maxValue += 25; 
-                PlayerStats.plStats.skillPoint--;
+                PlayerController.instance.plF.maxHp += 25;
+                PlayerController.instance.hBarPlayerSlider.maxValue = PlayerController.instance.plF.maxHp;
+                PlayerController.instance.plF.skillPoint--;
             }
         }
     }

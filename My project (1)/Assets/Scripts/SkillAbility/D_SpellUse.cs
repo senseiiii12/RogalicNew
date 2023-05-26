@@ -41,9 +41,9 @@ public class D_SpellUse : MonoBehaviour
 
     public void UseSkill(int i)
     {
-        if(PlayerStats.plStats.mana > 0 /*&& D_SpellController.d_instance.skillItems[i].IsCoolDown == false*/)
+        if(PlayerController.instance.plF.mana > 0 /*&& D_SpellController.d_instance.skillItems[i].IsCoolDown == false*/)
         {
-            PlayerStats.plStats.mana -= D_SpellController.d_instance.skillItems[i].ManaCoastSkill;
+            PlayerController.instance.plF.mana -= D_SpellController.d_instance.skillItems[i].ManaCoastSkill;
             GameObject spell = Instantiate(D_SpellController.d_instance.skillItems[i].prefabSkill, player.transform.position, Quaternion.identity);
             Vector2 mPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 myPosition = player.transform.position;

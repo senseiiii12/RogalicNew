@@ -7,12 +7,12 @@ public class EnemySpell : MonoBehaviour
 {
     public int minDamage;
     public int maxDamage;
-    PlayerStats stats;
+    PlayerController stats;
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 3);
-        stats = GameObject.FindAnyObjectByType<PlayerStats>();
+        stats = GameObject.FindAnyObjectByType<PlayerController>();
     }
 
     // Update is called once per frame

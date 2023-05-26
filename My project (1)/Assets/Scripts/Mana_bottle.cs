@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mana_bottle : MonoBehaviour
 {
-    public float mana;
+    public int mana;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class Mana_bottle : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            PlayerStats.plStats.getMana(mana);
+            PlayerController.instance.getMana(mana);
             Destroy(gameObject);
         }
     }

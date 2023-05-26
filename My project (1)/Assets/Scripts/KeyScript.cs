@@ -19,7 +19,7 @@ public class KeyScript : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            PlayerStats.plStats.keys += 1;
+            PlayerController.instance.plF.keys += 1;
             Destroy(gameObject);
         }
     }

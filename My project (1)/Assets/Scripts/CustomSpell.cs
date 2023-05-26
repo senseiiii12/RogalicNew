@@ -20,7 +20,7 @@ public class CustomSpell : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        int damage = Random.Range(PlayerStats.plStats.minDamage, PlayerStats.plStats.maxDamage);
+        int damage = Random.Range(0, PlayerController.instance.plF.maxDamage);
         ScriptEnemy enemy = collision.GetComponent<ScriptEnemy>();
         if (enemy != null)
         {

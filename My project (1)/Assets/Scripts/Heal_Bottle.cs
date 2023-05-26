@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Heal_Bottle : MonoBehaviour
 {
-    public float heal;
+    public int heal;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class Heal_Bottle : MonoBehaviour
     {
         if(collision.name == "Player")
         {
-            PlayerStats.plStats.getHeal(heal);
+            PlayerController.instance.getHeal(heal);
             Destroy(gameObject);
         }
     }

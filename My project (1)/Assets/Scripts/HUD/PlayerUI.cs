@@ -43,19 +43,19 @@ public class PlayerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countCoin.GetComponent<Text>().text = PlayerStats.plStats.bitCoins.ToString();
-        countSouls.GetComponent<Text>().text = PlayerStats.plStats.souls.ToString();
-        countKeys.GetComponent<Text>().text = PlayerStats.plStats.keys.ToString();
+        countCoin.GetComponent<Text>().text = PlayerController.instance.plF.bitCoins.ToString();
+        countSouls.GetComponent<Text>().text = PlayerController.instance.plF.souls.ToString();
+        countKeys.GetComponent<Text>().text = PlayerController.instance.plF.keys.ToString();
 
 
-        attackSpeed.GetComponent<Text>().text = PlayerStats.plStats.force.ToString();
-        moveSpeed.GetComponent<Text>().text = PlayerStats.plStats.speed.ToString();
-        damage.GetComponent<Text>().text = PlayerStats.plStats.maxDamage.ToString();
-        maxHealth.GetComponent<Text>().text = PlayerStats.plStats.maxHealth.ToString();
+        attackSpeed.GetComponent<Text>().text = PlayerController.instance.plF.attackSpeed.ToString();
+        moveSpeed.GetComponent<Text>().text = PlayerController.instance.plF.moveSpeed.ToString();
+        damage.GetComponent<Text>().text = PlayerController.instance.plF.maxDamage.ToString();
+        maxHealth.GetComponent<Text>().text = PlayerController.instance.plF.maxHp.ToString();
         
-        killCount.GetComponent<Text>().text = PlayerStats.plStats.killCount.ToString();
-        CountLevel.GetComponent<Text>().text = PlayerStats.plStats.LevelHero.ToString();
-        CountSkillPoint.GetComponent<Text>().text = PlayerStats.plStats.skillPoint.ToString();
+        killCount.GetComponent<Text>().text = PlayerController.instance.plF.killCount.ToString();
+        CountLevel.GetComponent<Text>().text = PlayerController.instance.plF.levelHero.ToString();
+        CountSkillPoint.GetComponent<Text>().text = PlayerController.instance.plF.skillPoint.ToString();
 
         CountInSliderAS.GetComponent<Text>().text = LevelSkills.lvlskill.countSliderAS.ToString();
         CountInSliderMS.GetComponent<Text>().text = LevelSkills.lvlskill.countSliderMS.ToString();
@@ -67,8 +67,8 @@ public class PlayerUI : MonoBehaviour
         plus_D.GetComponent<Text>().text = "+" + LevelSkills.lvlskill.plus_skillD.ToString();
         plus_MH.GetComponent<Text>().text = "+" + LevelSkills.lvlskill.plus_skillMH.ToString();
 
-        HP_text.GetComponent<Text>().text = PlayerStats.plStats.health.ToString();
-        Mana_text.GetComponent<Text>().text = PlayerStats.plStats.mana.ToString();
+        HP_text.GetComponent<Text>().text = PlayerController.instance.plF.hp.ToString();
+        Mana_text.GetComponent<Text>().text = PlayerController.instance.plF.mana.ToString();
 
 
 

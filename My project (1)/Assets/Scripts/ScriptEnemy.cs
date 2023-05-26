@@ -38,7 +38,6 @@ public class ScriptEnemy : MonoBehaviour
         enemyInstance = this;
         player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("enemyShooting", cooldown, cooldown);
-        stats = GameObject.FindAnyObjectByType<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -57,8 +56,8 @@ public class ScriptEnemy : MonoBehaviour
     }
 
     private void Die()
-    {       
-        PlayerStats.plStats.killCount += 1;
+    {
+        PlayerController.instance.plF.killCount += 1;
         Instantiate(prefGraveStone, gameObject.transform.position, Quaternion.identity);
         int random = UnityEngine.Random.Range(0,100);
         if(random <= 5)
@@ -85,7 +84,7 @@ public class ScriptEnemy : MonoBehaviour
         PlayerMove player = collision.GetComponent<PlayerMove>();
         if (player != null)
         {
-            stats.getDamage(damage); 
+            PlayerController.instance.getDamage(damage); 
         }
     }
 

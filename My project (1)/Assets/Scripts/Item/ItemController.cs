@@ -23,19 +23,19 @@ public class ItemController : MonoBehaviour
         switch (item.type)
         {
             case Item.ItemType.PotionHeal:
-                PlayerStats.plStats.getHeal(item.value);
+                PlayerController.instance.getHeal(item.value);
                 RemoveItem();
                 break;
             case Item.ItemType.PotionMana:
-                PlayerStats.plStats.getMana(item.value);
+                PlayerController.instance.getMana(item.value);
                 RemoveItem();
                 break;
             case Item.ItemType.Weapon:
-                PlayerStats.plStats.maxDamage += item.value;
+                PlayerController.instance.plF.maxDamage += item.value;
                 RemoveItem();
                 break;
             case Item.ItemType.OverSpeed:
-                PlayerStats.plStats.speed += item.value;
+                PlayerController.instance.plF.moveSpeed += item.value;
                 RemoveItem();
                 break;
         }
@@ -43,9 +43,9 @@ public class ItemController : MonoBehaviour
 
     public void ByItemShop()
     {
-        if (PlayerStats.plStats.bitCoins >= item.price)
+        if (PlayerController.instance.plF.bitCoins >= item.price)
         {
-            PlayerStats.plStats.bitCoins -= item.price;
+            PlayerController.instance.plF.bitCoins -= item.price;
             InventoryController.Instance.Add(item);
         }   
     }
@@ -53,7 +53,7 @@ public class ItemController : MonoBehaviour
 
     public void DropItem()
     {
-            Vector3 point = (UnityEngine.Random.insideUnitSphere * 5) + PlayerStats.plStats.player.transform.position;
+            Vector3 point = (UnityEngine.Random.insideUnitSphere * 5) + PlayerController.instance.player.transform.position;
             Instantiate(item.prefab, point, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
             InventoryController.Instance.Remove(item);
             Destroy(gameObject);
